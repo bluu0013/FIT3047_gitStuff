@@ -2,6 +2,7 @@
 # '1 + 2' -> 3,
 # '1 - 2' -> -1,
 # '1 * 2' -> 2
+# '1 / 2' -> 0.5
 
 def compute(expression):
     num0, operator, num1 = expression.split(' ')
@@ -12,6 +13,8 @@ def compute(expression):
         return num0 - num1
     elif operator == '*':
         return num0 * num1
+    elif operator == '/':
+        return num0 / num1
     else:
         print('unknown operator!')
         return None
